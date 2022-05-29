@@ -1,0 +1,113 @@
+.nav
+    border-bottom 1px solid grayColor
+    margin-bottom 40px
+
+    &__ul
+        display flex
+        justify-content space-between
+        padding 30px 0
+
+    &__link
+        font-weight bold
+        font-size 18px
+        color grayColor
+
+        &.active, &:hover
+            color blackColor
+
+.hero
+    margin-bottom 100px
+
+    &__top
+        display flex
+        justify-content space-between
+        align-items end
+        margin-bottom 50px
+        position relative
+
+        &-name
+            h2
+                font-size 47px
+
+        &-info
+            font-size 18px
+            font-weight medium
+            margin-bottom 10px
+
+        &-lang
+            transform: rotate(-90deg)
+            position relative
+            right -25px
+            top -35px
+
+            &__choice
+                color grayColor
+                font-weight bold
+                font-size 16px
+
+                &.active
+                    color blackColor
+
+                &::after
+                    content: '|'
+                    margin 0 5px
+                    font-weight bold
+                    color blackColor
+
+                &:last-child
+                    &::after
+                        display none
+
+        &-mobile-btn
+            cursor pointer
+            position absolute
+            right 0
+            top 5px
+            display none
+
+            &__bar
+                width 30px
+                height 4px
+                background-color #000
+                margin-bottom 4px
+
+                &:last-child
+                    margin-bottom 0
+
+    &__image
+        img
+            width 100%
+
+    &__image-mobile
+        display none
+
+        img
+            width 100%
+
+@media screen and (max-width: 430px)
+
+    .nav
+        display none
+
+    .hero
+        margin-top 65px
+
+        &__image
+            display none
+
+        &__image-mobile
+            display block
+
+        &__top
+            flex-direction column
+            align-items start
+            margin-bottom 30px
+
+            &-name
+                margin-bottom 20px
+
+            &-lang
+                display none
+
+            &-mobile-btn
+                display block

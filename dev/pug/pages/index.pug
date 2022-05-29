@@ -1,0 +1,55 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page'
+
+block content
+	.mobile-menu
+		.mobile-menu__exit-btn
+			.mobile-menu__exit-btn__bar 
+			.mobile-menu__exit-btn__bar 
+		ul.mobile-menu__list
+			li.mobile-menu__item
+				a.mobile-menu__link.active(href="#") Home
+			li.mobile-menu__item
+				a.mobile-menu__link(href="#") About me
+			li.mobile-menu__item
+				a.mobile-menu__link(href="#") Skills
+			li.mobile-menu__item
+				a.mobile-menu__link(href="#") Portfolio
+			li.mobile-menu__item
+				a.mobile-menu__link(href="#") Contacts
+		.mobile-menu__lang
+			a.mobile-menu__lang-choice(href="#") RU
+			a.mobile-menu__lang-choice.active(href="#") ENG
+
+	.nav
+		ul.nav__ul 
+			li.nav__item
+				a.nav__link.active(href="#") Home
+			li.nav__item
+				a.nav__link(href="#") About me
+			li.nav__item
+				a.nav__link(href="#") Skills
+			li.nav__item
+				a.nav__link(href="#") Portfolio
+			li.nav__item
+				a.nav__link(href="#") Contacts
+
+	.hero
+		.hero__top
+			.hero__top-name
+				h2 Denis<br>Novik 
+			.hero__top-info UX|UI designer<br>24 years old, Minsk
+			.hero__top-lang
+				a.hero__top-lang__choice(href="#") RU
+				a.hero__top-lang__choice.active(href="#") ENG
+			.hero__top-mobile-btn
+				.hero__top-mobile-btn__bar
+				.hero__top-mobile-btn__bar
+				.hero__top-mobile-btn__bar
+		.hero__image
+			img(src="static/img/content/banner.png", alt="")
+		.hero__image-mobile
+			img(src="static/img/content/banner_mobile.png", alt="")
